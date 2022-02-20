@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DashboardModule.Activity.TrackOrderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llApplied"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-2dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="8dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|center_vertical"
+                                    android:background="@color/colorSecondary" />
+
+                                <LinearLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ovel_timeline"
+                                    android:gravity="center" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_order_received"
+                                    app:tint="@color/white" />
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llAppliedStatus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="16dp"
+                                android:background="@drawable/rect_color_timeline_15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvApplied"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/second_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="Order Received"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/tvAppliedStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="start"
+                                    android:includeFontPadding="false"
+                                    android:text="Your order has been received"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvAppliedDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="end"
+                                    android:includeFontPadding="false"
+                                    android:text="25 Sept, 2020 10:20 AM"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTagProcessing"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="-20dp"
+                                android:gravity="end"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivAppliedWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transpar"
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llApplicationProcessing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-2dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:layout_width="8dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|center_vertical"
+                                    android:background="@color/colorSecondary" />
+
+                                <LinearLayout
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center_vertical|center"
+                                    android:background="@drawable/ovel_timeline" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_order_processed"
+                                    app:tint="@color/white" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llApplicationProcessingStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/rect_color_timeline_15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvApplicationProcessing"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/second_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="Application Processing"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/tvApplicationProcessingStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="start"
+                                    android:includeFontPadding="false"
+                                    android:text="Your order has been processed"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="end"
+                                    android:includeFontPadding="false"
+                                    android:text="25 Sept, 2020 10:20 AM"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/llTagApplicationProcessing"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_gravity="end"
+                                android:layout_marginTop="-20dp"
+                                android:gravity="end"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivApplicationProcessingWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flOrderShipped"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-2dp">
+
+                    <LinearLayout
+                        android:id="@+id/llConfirmQuotation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-2dp"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:tint="@color/colorSecondary">
+
+                                <LinearLayout
+                                    android:id="@+id/llOrderShippedTag1"
+                                    android:layout_width="8dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|center_vertical"
+                                    android:background="@color/colorSecondary"
+                                    android:orientation="vertical" />
+
+                                <LinearLayout
+                                    android:id="@+id/llOrderShippedTag2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center_vertical|center"
+                                    android:background="@drawable/ovel_timeline"
+                                    android:orientation="vertical" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_order_shipped"
+                                    app:tint="@color/white" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llConfirmQuotationStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llOrderShippedTag3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/rect_color_timeline_15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvConfirmQuotation"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/second_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="Order Shipped"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/tvConfirmQuotationStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="start"
+                                    android:includeFontPadding="false"
+                                    android:text="Your order has been shipped"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="end"
+                                    android:includeFontPadding="false"
+                                    android:text="25 Sept, 2020 10:00 AM"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center_vertical|end"
+                                android:layout_marginTop="-20dp"
+                                android:layout_marginEnd="20dp"
+                                android:gravity="center_vertical|end"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivConfirmQuotationWrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transpar_white"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flOrderDelivered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/llPayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <LinearLayout
+                                    android:id="@+id/llOrderDeliveredTag1"
+                                    android:layout_width="8dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center|center_vertical"
+                                    android:background="@color/colorSecondary"
+                                    android:orientation="vertical" />
+
+                                <LinearLayout
+                                    android:id="@+id/llOrderDeliveredTag2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center_vertical|center"
+                                    android:background="@drawable/ovel_timeline"
+                                    android:orientation="vertical" />
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_order_delivered"
+                                    app:tint="@color/white" />
+
+                            </FrameLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPaymentStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/llOrderDeliveredTag3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/rect_color_timeline_15dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvPaymentStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/second_bold"
+                                    android:includeFontPadding="false"
+                                    android:text="Order Delivered"
+                                    android:textColor="@color/white"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/tvPaymentStatusText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="start"
+                                    android:includeFontPadding="false"
+                                    android:text="Your order has been delivered"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:fontFamily="@font/first_regular"
+                                    android:gravity="end"
+                                    android:includeFontPadding="false"
+                                    android:text="25 Sept, 2020 10:00 AM"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

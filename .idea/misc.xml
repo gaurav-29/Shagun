@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/drawable/bg_bottombar.xml" value="0.2203125" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/drawable/ic_call.xml" value="0.2203125" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/drawable/ic_cart.xml" value="0.2203125" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/drawable/ic_download.xml" value="0.2203125" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/drawable/ic_minus.xml" value="0.2203125" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/drawable/ic_plus.xml" value="0.2203125" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/drawable/ic_share.xml" value="0.2203125" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/activity_contact_us.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/activity_otpactivity.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/activity_place_order2.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/activity_product_detail.xml" value="0.33" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/activity_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/fragment_wishlist.xml" value="0.18" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/row_cart.xml" value="0.21" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/row_product_detail.xml" value="0.33" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/row_select_address.xml" value="0.20416666666666666" />
+        <entry key="..\:/PROJECTS - ARCTIC FOX/Shagun/app/src/main/res/layout/spinner_item2.xml" value="0.13854166666666667" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

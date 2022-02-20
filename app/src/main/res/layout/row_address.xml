@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:id="@+id/llAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Address"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:id="@+id/ivDelete"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_delete"
+                    android:layout_weight="1"
+                    app:tint="@color/light_blue" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/first_regular"
+                android:text="City"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <TextView
+                android:id="@+id/tvPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/first_regular"
+                android:text="Postal Code"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <TextView
+                android:id="@+id/tvCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/first_regular"
+                android:text="Country"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="10dp"/>
+
+            <TextView
+                android:id="@+id/tvPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/first_regular"
+                android:text="Phone"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:layout_marginHorizontal="10dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

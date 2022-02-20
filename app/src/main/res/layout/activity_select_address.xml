@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DashboardModule.Activity.SelectAddressActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ivAddAddress"
+            android:layout_below="@id/toolbar"
+            android:layout_marginHorizontal="13dp"
+            android:layout_marginTop="10dp"
+            android:overScrollMode="never">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/ivAddAddress"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_above="@id/tvPlaceOrder"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_plus"
+            app:tint="@color/colorPrimary" />
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/tvAddAddress"-->
+        <!--            android:layout_width="150dp"-->
+        <!--            android:layout_height="44dp"-->
+        <!--            android:layout_above="@id/tvPlaceOrder"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:background="@drawable/bg_btngradient"-->
+        <!--            android:fontFamily="@font/second_bold"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="Add Address"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="18sp" />-->
+
+        <TextView
+            android:id="@+id/tvPlaceOrder"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_btngradient"
+            android:fontFamily="@font/second_bold"
+            android:gravity="center"
+            android:text="Place Order"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvNoDataFound"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/ivAddAddress"
+            android:layout_below="@id/toolbar"
+            android:fontFamily="@font/second_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="No data found..."
+            android:textColor="@color/colorPrimary"
+            android:textSize="22sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</layout>

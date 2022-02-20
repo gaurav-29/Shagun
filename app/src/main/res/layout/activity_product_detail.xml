@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DashboardModule.Activity.ProductDetailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar3" />
+
+        <LinearLayout
+            android:id="@+id/llSearch"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/toolbar"
+            android:background="@drawable/bg_gradient"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_search"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:adjustViewBounds="true"
+                    android:padding="9dp"
+                    android:src="@drawable/ic_search" />
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/first_regular"
+                    android:hint="Search"
+                    android:imeOptions="actionSearch"
+                    android:includeFontPadding="false"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColorHint="@color/hint"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/llBottomBar"
+            android:layout_below="@id/llSearch"
+            android:overScrollMode="never">
+
+            <RelativeLayout
+                android:id="@+id/rlSlider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <FrameLayout
+                    android:id="@+id/flSlider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                        android:id="@+id/slider1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="10dp"
+                        app:autoPlay="true"
+                        app:carouselType="BLOCK"
+                        app:imageScaleType="centerCrop"
+                        app:showBottomShadow="false"
+                        app:showIndicator="true"
+                        app:showNavigationButtons="false"
+                        app:showTopShadow="false" />
+
+                    <ImageView
+                        android:id="@+id/ivWishlistOutlined"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_wishlist_outlined"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/ivWishlistFilled"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="top|end"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_wishlist_filled"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/flSlider1"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/second_bold"
+                    android:text="Cotton Shirt (Peter England, Size-M)"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvRs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Rs.  "
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvPrize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvName"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/tvRs"
+                    android:fontFamily="@font/first_regular"
+                    android:text="200"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvPrize"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/second_bold"
+                    android:text="Payment Options"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/llPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/tvPayment"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/et_border2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <Spinner
+                        android:id="@+id/spPayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvDesHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/llPayment"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/second_bold"
+                    android:text="Product Description"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDesHeading"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:fontFamily="@font/first_regular"
+                    android:text="@string/description"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvDescription"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llAddToCart"
+                        android:layout_width="140dp"
+                        android:layout_height="34dp"
+                        android:background="@drawable/bg_btngradient"
+                        android:gravity="center"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_cart" />
+
+                        <TextView
+                            android:id="@+id/tvAddToCart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/second_bold"
+                            android:text="Add To Cart"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llAddRemove"
+                        android:layout_width="140dp"
+                        android:layout_height="34dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ivMinus"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="15dp"
+                            android:src="@drawable/ic_minus"
+                            app:tint="@color/colorPrimary" />
+
+                        <TextView
+                            android:id="@+id/tvQuantity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/first_regular"
+                            android:text="0"
+                            android:textColor="@color/colorSecondary"
+                            android:textSize="24sp" />
+
+                        <ImageView
+                            android:id="@+id/ivPlus"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_plus"
+                            app:tint="@color/colorPrimary" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="140dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_btngradient"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_call" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/second_bold"
+                            android:text="Inquiry"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:id="@+id/llBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_bottombar"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llDownload"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivDownload"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_download" />
+
+                <TextView
+                    android:id="@+id/tvDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Download"
+                    android:textColor="@color/colorSecondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llShare"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivShare"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_share" />
+
+                <TextView
+                    android:id="@+id/tvShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Share"
+                    android:textColor="@color/colorSecondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llWhatsapp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivWhatsapp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_whatsapp3"
+                    app:tint="@color/colorSecondary" />
+
+                <TextView
+                    android:id="@+id/tvWhatsapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Whatsapp"
+                    android:textColor="@color/colorSecondary" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

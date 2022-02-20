@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvProductDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="5dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivProduct"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:src="@drawable/app_icon" />
+
+                <TextView
+                    android:id="@+id/tvProductName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toEndOf="@id/ivProduct"
+                    android:fontFamily="@font/second_bold"
+                    android:text="Cotton Shirt (Peter England, Size-M)"
+                    android:textColor="@color/black"
+                    android:maxLines="2"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvRs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvProductName"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/ivProduct"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Rs. 1500 Per Pc"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvRs"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/ivProduct"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Qty : 2"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvQuantity"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@id/ivProduct"
+                    android:fontFamily="@font/first_regular"
+                    android:text="Total Rs. 3000"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
